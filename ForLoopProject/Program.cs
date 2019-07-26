@@ -3,20 +3,26 @@
 namespace ForLoopProject {
     class Program {
         static void Main(string[] args) {
-            int[] ints = { 859, 941, 223, 845,
+            int[] numbers = { 859, 941, 223, 845,
                     417, 488, 346, 700, 789, 628, 491,
                     816, 538, 962, 931, 401, 566, 810,
                     974, 122, 174, 485, 953, 335, 463
             };
             int total = 0;
-            for(int idx = 0; idx<ints.Length; idx++) {
-                total += ints[idx];
+
+            foreach (int Fred in numbers) {
+                total += Fred;
             }
 
-            decimal average = total / ints.Length;
-            Console.WriteLine($"Total: {total}" + 
-                $" Average: {average}.");
-                
-        }
+            decimal average = total / (decimal)numbers.Length;
+            Console.WriteLine($"Total: {total}" +
+            $" Average: {average}.");
+            //for (int idx = 0; idx < ints.Length; idx++) {
+            //    total += ints[idx] * 3 / 4;
+            }
+        //Casting allows for more accurate data to be collected when dealing with decimals
+        //this is a cast - which means treat the value like something else just for this line
+
+
     }
-}
+    }
