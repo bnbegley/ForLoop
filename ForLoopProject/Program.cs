@@ -1,5 +1,5 @@
 ﻿using System;
-
+//practice this MORE!
 namespace ForLoopProject {
     class Program {
         static void Main(string[] args) {
@@ -8,15 +8,28 @@ namespace ForLoopProject {
                     816, 538, 962, 931, 401, 566, 810,
                     974, 122, 174, 485, 953, 335, 463
             };
-            int total = 0;
+            string[] names = {"Brailee", "Briana", "Greg", "Jesse",
+                "Alex", "Titus", "Maggie", "Marianne","Glenn" };
 
-            foreach (int Fred in numbers) {
-                total += Fred;
+
+            string allNames = "";
+            foreach (string name in names) {
+                string upperName = name.ToUpper();
+                allNames += upperName;
             }
+            Console.WriteLine($"The Names all together are: {allNames}");
+            
 
-            decimal average = total / (decimal)numbers.Length;
-            Console.WriteLine($"Total: {total}" +
-            $" Average: {average}.");
+
+            //int total = 0;
+
+            //foreach (int Fred in numbers) {
+            //    total += Fred;
+        }
+
+            //decimal average = total / (decimal)numbers.Length;
+            //Console.WriteLine($"Total: {total}" +
+            //$" Average: {average}.");
             //for (int idx = 0; idx < ints.Length; idx++) {
             //    total += ints[idx] * 3 / 4;
             }
@@ -25,4 +38,4 @@ namespace ForLoopProject {
 
 
     }
-    }
+    
